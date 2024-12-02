@@ -1,9 +1,9 @@
-﻿using ScreenSound.Banco;
+using ScreenSound.Banco;
 using ScreenSound.Modelos;
 
 namespace ScreenSound.Menus;
 
-internal class MenuMostrarMusicas : Menu
+internal class MenuListarMusicasOrdenadaPorAno : Menu
 {
     public override void Executar(DAL<Artista> artistaDAL)
     {
@@ -15,7 +15,7 @@ internal class MenuMostrarMusicas : Menu
         if (artistaRecuperado is not null)
         {
             Console.WriteLine("\nDiscografia:");
-            artistaRecuperado.ExibirDiscografia();
+            artistaRecuperado.ExibirDiscografiaPorAnoLancamento();
             Console.WriteLine("\nDigite uma tecla para voltar ao menu principal");
             Console.ReadKey();
             Console.Clear();
